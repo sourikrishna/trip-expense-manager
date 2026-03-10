@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>Trip Expense Manager</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="style.css">
+
+	<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+	<div class="container">
+
+		<div class="title-section">
+
+			<h1 class="main-title">Trip Expense Manager</h1>
+
+			<div class="description-box">
+				<p>
+					Plan your trips without worrying about messy expense calculations.
+					Track every payment made during the journey and automatically split costs among members.
+					Whether one person pays or multiple people contribute, the system calculates who owes whom.
+					Perfect for group trips, vacations, and weekend getaways with friends.
+				</p>
+			</div>
+
+		</div>
+
+		<div class="glass-card">
+
+			<h2>Setup Trip</h2>
+
+			<input type="number" id="memberCount" placeholder="Number of Members">
+
+			<button onclick="createMembers()">Create Members</button>
+
+			<div id="members"></div>
+
+		</div>
+
+		<div id="expenseSection" class="glass-card hidden">
+
+			<h2>Add Expense</h2>
+
+			<input id="desc" placeholder="Expense description">
+
+			<input id="amount" type="number" placeholder="Amount">
+
+			<label>Paid By</label>
+			<select id="paidBy"></select>
+
+			<h3>Participants</h3>
+
+			<div id="participants"></div>
+
+			<div class="unequal-container">
+
+				<label class="switch">
+					<input type="checkbox" id="unequalToggle" onchange="toggleUnequal()">
+					<span class="slider"></span>
+				</label>
+
+				<span class="unequal-text">Unequal contribution</span>
+
+			</div>
+
+			<div id="unequalSection"></div>
+
+			<button class="addBtn" onclick="addExpense()">Add Expense</button>
+
+		</div>
+
+		<div class="glass-card">
+
+			<h2>Expenses</h2>
+
+			<div id="expenseList"></div>
+
+		</div>
+
+		<div class="glass-card">
+
+			<button class="calcBtn" onclick="calculate()">Calculate Settlement</button>
+
+			<div id="result"></div>
+
+		</div>
+
+		<footer class="footer">
+
+			<div class="footer-title">
+				Made by Souri Krishna
+			</div>
+
+			<div class="socials">
+
+				<a href="https://www.instagram.com/souri_chaluvadi?igsh=MTJtbnQ0cjd6NXhhcg==" class="icon">
+					<svg viewBox="0 0 24 24">
+						<path d="M7 2C4.8 2 3 3.8 3 6v12c0 2.2 1.8 4 4 4h10c2.2 
+						0 4-1.8 4-4V6c0-2.2-1.8-4-4-4H7zm5 
+						5a5 5 0 110 10 5 5 0 010-10zm6.5-.8a1.2 1.2 0 110 2.4 
+						1.2 1.2 0 010-2.4z"/>
+					</svg>
+				</a>
+
+				<a href="https://www.linkedin.com/in/souri-krishna-38359a329" class="icon">
+					<svg viewBox="0 0 24 24">
+						<path d="M4.98 3.5C4.98 
+						4.88 3.86 6 2.48 6S0 4.88 
+						0 3.5 1.12 1 2.48 1s2.5 
+						1.12 2.5 2.5zM.5 
+						8h4v12h-4zM8 8h3.6v1.7h.1c.5-.9 
+						1.8-1.9 3.7-1.9 4 0 
+						4.7 2.6 4.7 6V20h-4v-5.3c0-1.3 
+						0-3-1.8-3s-2.1 
+						1.4-2.1 2.9V20H8z"/>
+					</svg>
+				</a>
+
+				<a href="https://github.com/sourikrishna" class="icon">
+					<svg viewBox="0 0 24 24">
+						<path d="M12 
+						0C5.4 0 0 5.4 0 12c0 5.3 
+						3.4 9.8 8.2 11.4.6.1.8-.2.8-.6v-2.2c-3.3.7-4-1.4-4-1.4-.5-1.3-1.3-1.6-1.3-1.6-1.1-.7.1-.7.1-.7 
+						1.2.1 1.8 1.2 1.8 
+						1.2 1 .2 2.7 1.7 3.4 
+						2.4.1-.8.4-1.4.7-1.7-2.7-.3-5.5-1.3-5.5-6 
+						0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.6.1-3.2 
+						0 0 1-.3 3.3 1.2a11.5 11.5 
+						0 016 0C17 4.7 18 
+						5 18 5c.6 1.6.2 2.9.1 
+						3.2.8.8 1.2 1.9 
+						1.2 3.2 0 4.7-2.8 
+						5.7-5.5 6 .4.4.8 
+						1.1.8 2.3v3.3c0 .3.2.7.8.6A12 
+						12 0 0024 12c0-6.6-5.4-12-12-12z"/>
+					</svg>
+				</a>
+
+			</div>
+
+		</footer>
+
+	</div>
+
+	<script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,276 @@
+body{
+margin:0;
+font-family:'Inter',sans-serif;
+background:linear-gradient(135deg,#0f172a,#1e293b,#020617);
+color:white;
+}
+
+/* Container */
+
+.container{
+max-width:850px;
+margin:auto;
+padding:30px 20px;
+}
+
+/* Title */
+
+.main-title{
+font-family:'Orbitron',sans-serif;
+font-size:48px;
+text-align:center;
+text-shadow:
+0 0 10px rgba(96,165,250,0.8),
+0 0 25px rgba(96,165,250,0.6),
+0 0 40px rgba(96,165,250,0.4);
+}
+
+/* Description */
+
+.description-box{
+background:rgba(255,255,255,0.06);
+padding:18px;
+border-radius:14px;
+line-height:1.7;
+border:1px solid rgba(255,255,255,0.12);
+margin-top:15px;
+color:#d1d5db;
+}
+
+
+
+.glass-card{
+background:rgba(255,255,255,0.08);
+backdrop-filter:blur(18px);
+border:1px solid rgba(255,255,255,0.15);
+border-radius:18px;
+padding:24px;
+margin-top:20px;
+box-shadow:0 8px 30px rgba(0,0,0,0.35);
+transition:all 0.3s ease;
+}
+
+.glass-card:hover{
+transform:translateY(-3px);
+box-shadow:0 12px 35px rgba(0,0,0,0.45);
+}
+
+/* Inputs */
+
+input,select{
+width:100%;
+padding:11px;
+margin-top:10px;
+margin-bottom:12px;
+border-radius:10px;
+border:none;
+background:rgba(255,255,255,0.12);
+color:white;
+font-size:14px;
+outline:none;
+}
+
+select option{
+color:black;
+}
+
+/* Buttons */
+
+button{
+border:none;
+padding:12px;
+border-radius:12px;
+cursor:pointer;
+font-weight:500;
+transition:0.25s;
+}
+
+button:hover{
+transform:scale(1.03);
+}
+
+/* Add Expense */
+
+.addBtn{
+background:linear-gradient(135deg,#22c55e,#16a34a);
+color:white;
+width:100%;
+font-weight:600;
+}
+
+/* Settlement button */
+
+.calcBtn{
+background:linear-gradient(135deg,#3b82f6,#2563eb);
+color:white;
+width:100%;
+margin-bottom:15px;
+}
+
+/* Participants */
+
+.participant-row{
+display:flex;
+align-items:center;
+gap:12px;
+margin-bottom:10px;
+width:fit-content;
+}
+
+.participant-row input{
+width:18px;
+height:18px;
+cursor:pointer;
+}
+
+.participant-row span{
+font-size:16px;
+}
+
+/* Unequal toggle */
+
+.unequal-container{
+display:flex;
+align-items:center;
+gap:12px;
+margin-top:20px;
+}
+
+
+.switch{
+position:relative;
+display:inline-block;
+width:46px;
+height:24px;
+}
+
+.switch input{
+opacity:0;
+width:0;
+height:0;
+}
+
+.slider{
+position:absolute;
+cursor:pointer;
+top:0;
+left:0;
+right:0;
+bottom:0;
+background:#888;
+border-radius:34px;
+transition:0.3s;
+}
+
+.slider:before{
+position:absolute;
+content:"";
+height:18px;
+width:18px;
+left:3px;
+bottom:3px;
+background:white;
+border-radius:50%;
+transition:0.3s;
+}
+
+input:checked + .slider{
+background:#22c55e;
+}
+
+input:checked + .slider:before{
+transform:translateX(22px);
+}
+
+/* Expense cards */
+
+.expense-card{
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:rgba(255,255,255,0.07);
+padding:14px;
+border-radius:14px;
+margin-bottom:12px;
+border:1px solid rgba(255,255,255,0.12);
+backdrop-filter:blur(15px);
+transition:all 0.25s ease;
+}
+
+.expense-card:hover{
+transform:translateY(-4px);
+box-shadow:0 10px 30px rgba(0,0,0,0.5);
+border:1px solid rgba(96,165,250,0.5);
+}
+
+/* Settlement cards */
+
+.settlement{
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:rgba(255,255,255,0.08);
+border:1px solid rgba(255,255,255,0.15);
+padding:14px;
+border-radius:14px;
+margin-bottom:12px;
+backdrop-filter:blur(15px);
+transition:all 0.25s ease;
+}
+
+.settlement:hover{
+transform:scale(1.02);
+box-shadow:0 8px 25px rgba(0,0,0,0.4);
+border:1px solid rgba(96,165,250,0.5);
+}
+
+.amount{
+color:#facc15;
+font-weight:700;
+font-size:16px;
+}
+
+/* Footer */
+
+.footer{
+text-align:center;
+margin-top:70px;
+padding-top:30px;
+border-top:1px solid rgba(255,255,255,0.1);
+}
+
+/* Footer title */
+
+.footer-title{
+font-size:20px;
+letter-spacing:1px;
+margin-bottom:25px;
+text-shadow:0 0 12px rgba(96,165,250,0.8);
+}
+
+/* Social icons */
+
+.socials{
+display:flex;
+justify-content:center;
+gap:35px;
+margin-bottom:20px;
+}
+
+.icon svg{
+width:30px;
+height:30px;
+fill:white;
+transition:0.3s;
+}
+
+.icon:hover svg{
+fill:#60a5fa;
+transform:scale(1.25);
+}
+
+/* Hidden */
+
+.hidden{
+display:none;
+}
