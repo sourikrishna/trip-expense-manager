@@ -123,6 +123,6 @@ This project is deployed using: - GitHub Pages - Static website hosting
 
 ## 👤 Author
 
-**Souri Krishna**\
+**Souri Krishna**
 
 
